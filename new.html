@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="pet boarding , pet ,  boarding ">
+    <meta name="robots" content="INDEX , FOLLOW">
+    <link rel="stylesheet" href="new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@100;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Premium Pet Boarding</title>
+    <script>
+        const btn1Text = document.querySelector('.btn1-text');
+        const btn2Text = document.querySelector('.btn2-text');
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 808) {
+                btn1Text.textContent = btn1Text.dataset.originalText;
+                btn2Text.textContent = "Get Started";
+            } else {
+                btn1Text.textContent = btn1Text.dataset.originalText;
+                btn2Text.textContent = btn2Text.dataset.originalText;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="primary">
+        <div class="secondary">
+            <div class="tertiary">
+                <div class="firstRow">
+                    <div class="firstCol">
+                        <div class="contents">
+                            <div class="heading" id="top_header">
+                                <h1 id="ppt">
+                                    AWWZO</h1>
+                            </div>
+                            <div class="subText">
+                                <h2 id="sst">
+                                    Experience a new level of premium pet boarding with our state-of-the-art facility
+                                    and highly trained staff.
+                                </h2>
+                            </div>
+                            <div class="buttons">
+                                <div class="btn1">
+                                    <h2 class="btn1-text" data-original-text="Launching Soon"></h2>
+                                </div>
+                                <div class="btn2">
+                                    <h2 class="btn2-text" data-original-text="Get Exclusive Access"></h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="secondCol">
+                        <img class="image" src="./disp.png" alt="landing-picture" />
+                    </div>
+                </div>
+                <div id="lowerBox" class="redB">
+                    <div class="center-content">
+                        <div id="head_bottom_con">
+                            <h2 id="lowerTitle">Claim Exclusive Access</h2>
+                        </div>
+                        <div id="head_bottom_con2">
+                            <form class="claim-form">
+                                <input class="input-field" type="text" placeholder="Name" name="myName">
+                                <input class="input-field" type="tel" placeholder="Phone Number" name="myNumber">
+                            </form>
+                            <input class="claim-submit" type="submit" value="Claim">
+                        </div>
+                        <script>
+
+                            window.addEventListener('resize', function () {
+                                var lowerBox = document.getElementById('lowerBox');
+                                var windowHeight = window.innerHeight;
+                                lowerBox.style.top = (windowHeight - lowerBox.offsetHeight) / 2 + 'px';
+                            });
+
+
+                            var claimButton = document.getElementById('claim');
+                            claimButton.style.position = 'fixed';
+                            claimButton.style.bottom = '0px';
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
